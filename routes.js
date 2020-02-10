@@ -14,7 +14,9 @@ const playlist = require('./controllers/playlist.js');
 router.get('/', start.index);
 router.get('/dashboard', dashboard.index);
 router.get('/about', about.index);
+
 router.get('/playlist/:id', playlist.index);
+
 router.get('/playlist/:id/deleteSong/:songid', playlist.deleteSong);
 router.get('/dashboard/deleteplaylist/:id', dashboard.deletePlaylist);
 
