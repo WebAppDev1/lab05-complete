@@ -38,8 +38,7 @@ redbtn &&
 welcomeUserDiv &&
   welcomeUserDiv.addEventListener("click", (evt) => {
    // evt.currentTarget.style.display = "none";
-    welcomeUserDiv.style.display = "none";
-  });
+
 
 const yellowbtn  = document.querySelector(".yellow");
 
