@@ -5,7 +5,7 @@
       <th>Artist</th>
       <th>Genre</th>
       <th>Duration</th>
-      <th> </th>
+      <th>  </th>
     </tr>
   </thead>
   <tbody>
@@ -24,17 +24,17 @@
           {{duration}}
         </td>
         <td>
-          <a href="/playlist/{{../playlist.id}}/deletesong/{{id}}" class="ui tiny red button">Delete Song</a>
+          <a href="/playlist/{{../playlist.id}}/deletesong/{{id}}" class="ui tiny red button delsong">Delete Song</a>
         </td>
       </tr>
     {{/each}}
   </tbody>
 </table>
 
-<p>
+ <p>
   <span id="rating"> </span>
 </p>
 
-<button class="ui blue button" onclick="getRating()">
+<button class="ui yellow button">
   Rate it! <i class="star icon"></i>
 </button>
