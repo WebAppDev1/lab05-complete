@@ -1,7 +1,9 @@
 'use strict';
 
-const logger = require('../utils/logger');
-const playlistStore = require('../models/playlist-store');
+// import all required modules
+import logger from '../utils/logger.js';
+import playlistStore from '../models/playlist-store.js';
+
 
 const playlist = {
   index(request, response) {
@@ -13,7 +15,7 @@ const playlist = {
     };
     response.render('playlist', viewData);
   },
-    deleteSong(request, response) {
+  deleteSong(request, response) {
     const playlistId = request.params.id;
     const songId = request.params.songid;
     logger.debug(`Deleting Song ${songId} from Playlist ${playlistId}`);
@@ -22,4 +24,4 @@ const playlist = {
   },
 };
 
-module.exports = playlist;
+export default playlist;

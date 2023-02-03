@@ -58,7 +58,8 @@ ratebtn &&
   }
 });
 
-
 $(".delsong").click(() => confirm('Really delete this song?'))
 
 $(".delplaylist").click(() => confirm('Really delete this playlist?'))
+
+
