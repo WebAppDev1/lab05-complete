@@ -1,15 +1,20 @@
 'use strict';
 
-const _ = require('lodash');
-
+import _ from 'lodash';
+import { createRequire } from "module";
+const require = createRequire(import.meta.url);
+const playlistCollection = require("./playlist-store.json");
+            
 const playlistStore = {
 
-  playlistCollection: require('./playlist-store.json').playlistCollection,
+  // import the playlist collection object
+  playlistCollection: playlistCollection.playlistCollection,
 
+  // function to get all of the playlists
   getAllPlaylists() {
     return this.playlistCollection;
   },
-
+  
   getPlaylist(id) {
     return _.find(this.playlistCollection, { id: id });
   },
@@ -20,9 +25,10 @@ const playlistStore = {
   },
   
   removePlaylist(id) {
-  _.remove(this.playlistCollection, { id: id });
-},
-  
+    _.remove(this.playlistCollection, { id: id });
+  },
+
 };
 
-module.exports = playlistStore;
+// export the playlistStore object so it can be used elsewhere
+export default playlistStore;
